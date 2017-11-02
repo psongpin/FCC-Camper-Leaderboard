@@ -1,28 +1,34 @@
-.App {
-  text-align: center;
-}
+.table-filter {
+  background-color: #83c9f4;
+  padding: 15px 0;
+  margin-bottom: 50px;
+  color: #ffffff; }
+  .table-filter .nav-links {
+    float: left; }
+    .table-filter .nav-links a {
+      color: #ffffff;
+      margin-right: 15px; }
+  .table-filter form {
+    float: right;
+    line-height: 42px; }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+.camper-list-header {
+  background-color: #83c9f4;
+  padding: 15px; }
+  .camper-list-header h1 {
+    margin: 0;
+    color: #ffffff; }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
+.camper-list-table .avatar {
+  width: 40px;
+  border: 1px solid #83c9f4;
+  border-radius: 2px;
+  margin-right: 15px; }
 
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+footer {
+  background-color: #83c9f4;
+  color: #ffffff;
+  padding: 15px;
+  margin-top: 50px; }
+  footer p:last-child {
+    margin-bottom: 0; }

@@ -4,7 +4,9 @@ import axios from "axios";
 import TableFilter from "./components/TableFilter";
 import CamperList from "./components/CamperList";
 
+import "font-awesome/css/font-awesome.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 class App extends Component {
   constructor(props) {
@@ -55,6 +57,14 @@ class App extends Component {
       <div className="App">
         <TableFilter handleFilterChange={this.handleFilterChange} />
         <CamperList campers={this.state.campers} />
+
+        <footer className="text-center">
+          <p>
+            Powered by <strong>React</strong>
+          </p>
+
+          <p>Author: P.S.Ongpin</p>
+        </footer>
       </div>
     );
   }

@@ -1,10 +1,20 @@
 import React from "react";
+import FontAwesome from "react-fontawesome";
 
 import { Form, FormGroup, ControlLabel, FormControl } from "react-bootstrap";
 
 const TableFilter = ({ handleFilterChange }) => (
-  <section className="table-filter">
+  <header className="table-filter">
     <div className="container">
+      <div className="nav-links">
+        <a href="https://psongpin.github.io/">
+          <FontAwesome name="home" size="3x" />
+        </a>
+        <a href="https://freecodecamp.org/">
+          <FontAwesome name="free-code-camp" size="3x" />
+        </a>
+      </div>
+
       <Form inline>
         <FormGroup controlId="table-filter">
           <ControlLabel>Filter by:</ControlLabel>{" "}
@@ -19,7 +29,7 @@ const TableFilter = ({ handleFilterChange }) => (
         </FormGroup>
       </Form>
     </div>
-  </section>
+  </header>
 );
 
 export default TableFilter;
