@@ -19,32 +19,33 @@ class App extends Component {
   }
 
   handleFilterChange(newFilter) {
-    this.setState({ currentFilter: newFilter });
-
-    switch (this.state.currentFilter) {
+    switch (newFilter) {
       case "top30Days":
-        this.fetchCampers("recent");
+        this.fetchCampers("recent", newFilter);
         break;
 
       case "topAllTime":
-        this.fetchCampers("alltime");
+        this.fetchCampers("alltime", newFilter);
         break;
 
       default:
-        this.fetchCampers("recent");
+        this.fetchCampers("recent", newFilter);
     }
   }
 
-  fetchCampers(path) {
+  fetchCampers(path, newFilter) {
     axios
       .get(`https://fcctop100.herokuapp.com/api/fccusers/top/${path}`)
       .then(response => {
-        this.setState({ campers: response.data });
+        this.setState({
+          campers: response.data,
+          currentFilter: newFilter
+        });
       });
   }
 
   componentDidMount() {
-    this.fetchCampers("recent");
+    this.fetchCampers("recent", "top30Days");
   }
 
   componentDidUpdate() {}
