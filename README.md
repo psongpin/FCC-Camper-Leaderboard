@@ -1,3 +1,3 @@
 ## Free Code Camp - Camper Leaderboard
 
-buit with React and SASS.
+built with React and SASS.
