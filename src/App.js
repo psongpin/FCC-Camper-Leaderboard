@@ -20,6 +20,19 @@ class App extends Component {
 
   handleFilterChange(newFilter) {
     this.setState({ currentFilter: newFilter });
+
+    switch (this.state.currentFilter) {
+      case "top30Days":
+        this.fetchCampers("recent");
+        break;
+
+      case "topAllTime":
+        this.fetchCampers("alltime");
+        break;
+
+      default:
+        this.fetchCampers("recent");
+    }
   }
 
   fetchCampers(path) {
@@ -34,20 +47,7 @@ class App extends Component {
     this.fetchCampers("recent");
   }
 
-  componentDidUpdate() {
-    switch (this.state.currentFilter) {
-      case "top30Days":
-        this.fetchCampers("recent");
-        break;
-
-      case "topAllTime":
-        this.fetchCampers("alltime");
-        break;
-
-      default:
-        this.fetchCampers("recent");
-    }
-  }
+  componentDidUpdate() {}
 
   render() {
     return (
